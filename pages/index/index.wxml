@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="con" >
+    <view class='bg'>
+        <image src="../images/bg.png"  mode="aspectFill"></image>
+    </view>
+    <canvas canvas-id="mlength" class='mlength' ></canvas>
+    <canvas style="height:{{cavasHeight}};"  canvas-id="myCanvas" class="mycanvas"></canvas>
+    <view class="num" style="height: {{cavasHeight}};margin-top:10px;">
+        <view wx:for="{{array}}"  wx:key="unique" style="height: {{marginTop}}px" class="numcount">
+           {{item.val}}
+        </view>
+        <canvas canvas-id='nums' class='nums'></canvas>
+    </view>
+    <wxs module='move' src='./index.wxs'></wxs>
+    <canvas   canvas-id="caline" class='caline' catchtouchmove="changeCanvas" style="height: 100%" catchlongpress="divideLine"></canvas>
+    <view class='btnlist'>
+       <button  type="primary" size='default'>量角器</button>
+       <button  type="primary" size='default' bindtap="fixCount" id="{{minCount}}">取整</button>
+    </view>
+</view>

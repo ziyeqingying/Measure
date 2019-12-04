@@ -1,0 +1,88 @@
+/**index.wxss**/
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.bg image {
+  width: 100%;
+  height: 100%;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.mycanvas {
+  position: absolute;
+  width: 30px; 
+  /* background: lightblue; */
+  right: 0px;
+}
+.num {
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+.numcount {
+  font-size: 16px;
+  transform:rotate(90deg) translateX(-50%);
+}
+.nums {
+  height: 100%;
+  width: 30px;
+}
+
+.mlength {
+  height: 200px;
+  width: 120px;
+  position: fixed;
+  right: 30px;
+}
+
+.lines {
+  width:100%;
+  background-color: red;
+  background-clip:content-box;
+  height: 1px;
+  position: absolute; 
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: -30px;
+  transform: translateY(10px)
+
+}
+
+.btnlist {
+  position: fixed;
+  width: 180px;
+  bottom: 120px;
+  display: flex;
+  flex-direction: row;
+  transform: rotate(90deg);
+}
+
+.caline {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

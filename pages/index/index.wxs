@@ -1,0 +1,32 @@
+
+
+module.exports.touchMoveChange = function(event, ins) {
+    var windowHeight = event.currentTarget.id
+    var lineTop = event.touches[0].clientY
+    var transLength = lineTop;
+    if (lineTop < 10) {
+      transLength = 10;
+    }
+    else if(lineTop >= windowHeight) {
+      transLength = (parseInt(windowHeight) - 2)
+    }
+    ins.selectComponent(".lines").setStyle({
+      'transform': 'translateY(' + transLength + 'px)'
+    })
+    ins.callMethod("mycallback", transLength)
+    myLineTop = (function (transLength) {
+      return transLength
+    })(transLength)
+}
+
+module.exports.fixNum = function(event, ins) {
+  var min = event.currentTarget.id
+  var count = Math.round(myLineTop/min)
+  var intNum = count*min - 0.8
+  ins.selectComponent(".lines").setStyle({
+    'transform': 'translateY(' + intNum + 'px)'
+  })
+  ins.callMethod("fixNum", intNum)
+}
+
+// module.exports.measureLength = "200"
